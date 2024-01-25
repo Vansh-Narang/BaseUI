@@ -3,6 +3,8 @@ import img from "../assets/Left side.png"
 import { useForm } from "react-hook-form";
 import { FaGoogle } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin, FaDiscord } from "react-icons/fa6";
+import logo from "../assets/Vector 7.svg"
 const Signup = () => {
 
     const { register, handleSubmit } = useForm();
@@ -11,11 +13,20 @@ const Signup = () => {
 
     return (
         <div>
-            <div className='flex flex-row w-9/12 items-center'>
-                <div>
-                    <img src={img} alt='img' className='' />
+            <div className='flex flex-row w-9/12 items-center justify-between'>
+                <div className='bg-[#605BFF] h-screen clipper w-[730px] items-center justify-between'>
+                    <img src={logo} alt='img' className='bg-[#FCFCFF] rounded-full h-14 w-14 m-10' />
+                    <div className='items-center flex justify-center mt-96'>
+                        <h1 className='text-7xl text-[#FFF] relative mr-36 font-bold'>BASE</h1>
+                    </div>
+                    <div className='flex flex-row items-center text-white justify-center mr-36 gap-x-8 mt-60'>
+                        <FaGithub />
+                        <FaTwitter />
+                        <FaLinkedin />
+                        <FaDiscord />
+                    </div>
                 </div>
-                <div className='flex flex-col justify-center items-center'>
+                <div className='flex flex-row h-screen items-center justify-center'>
                     <div className='flex flex-col text-black mb-10 '>
                         <h1 className='font-bold mb-4 text-4xl '>Sign In</h1>
                         <p className='font-normal font-lato text-xl '>Sign in to your account</p>
