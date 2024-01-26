@@ -33,43 +33,42 @@ const Tagger = () => {
                 </div>
                 <div className='items-center justify-center mx-auto w-10/12'>
                     <h1 className='m-6 font-Figtree text-xl font-bold'>Uploads</h1>
-                    <div className='bg-[#F5F5F5] items-center justify-center ml-10 w-11/12'>
-                        <table className=''>
-                            <thead className=''>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Links</th>
-                                    <th>Prefix</th>
-                                    <th>Add tags</th>
-                                    <th>Selected tags</th>
-                                </tr>
-                                {data.map((item) => (
-                                    <>
-                                        < tr key={item.id} className='bg-white' >
-                                            <td>{item.id}</td>
-                                            <td>{item.links}</td>
-                                            <td>{item.prefix}</td>
-                                            <select onChange={(e) => {
-                                                tags.push(e.target.value);
-                                                selectedTags(tags)
-                                                console.log(e.target.value);
-                                            }} className=''>
-                                                {
+                    <table className='flex items-center justify-between bg-slate-400'>
+                        <thead className=''>
+                            <tr className='w-full'>
+                                <th>ID</th>
+                                <th>Links</th>
+                                <th>Prefix</th>
+                                <th>Add tags</th>
+                                <th>Selected tags</th>
+                            </tr>
+                            {data.map((item) => (
+                                <>
+                                    < tr key={item.id} className='bg-white' >
+                                        <td>{item.id}</td>
+                                        <td>{item.links}</td>
+                                        <td>{item.prefix}</td>
+                                        <select onChange={(e) => {
+                                            tags.push(e.target.value);
+                                            selectedTags(tags)
+                                            console.log(e.target.value);
+                                        }} className=''>
+                                            {
 
-                                                    item.select_tags.map((i) => (
-                                                        <>
-                                                            <option value="" selected disabled hidden>Select Tags</option>
-                                                            <option className='rounded-full'>
-                                                                {i}
-                                                            </option >
+                                                item.select_tags.map((i) => (
+                                                    <>
+                                                        <option value="" selected disabled hidden>Select Tags</option>
+                                                        <option className='rounded-full'>
+                                                            {i}
+                                                        </option >
 
-                                                        </>
+                                                    </>
 
-                                                    ))
-                                                }
-                                            </select>
-                                            <td>
-                                                {/* {
+                                                ))
+                                            }
+                                        </select>
+                                        <td>
+                                            {/* {
                                                     tags ? (
                                                         <div>
                                                             No tag found
@@ -80,17 +79,17 @@ const Tagger = () => {
                                                         </div>
                                                     )
                                                 } */}
-                                                {tags}
-                                            </td>
-                                        </tr >
-                                    </>
+                                            {tags}
+                                        </td>
+                                    </tr >
+                                </>
 
-                                ))}
+                            ))}
 
-                            </thead>
-                        </table>
+                        </thead>
+                    </table>
 
-                    </div>
+
                 </div>
             </div>
         </div >
