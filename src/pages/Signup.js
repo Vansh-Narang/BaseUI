@@ -3,11 +3,11 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 import { FaGoogle } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
-
+import { Link } from "react-router-dom"
 import AppBar from '../components/AppBar1';
 const Signup = () => {
 
-    const { register, handleSubmit } = useForm();
+    const { handleSubmit } = useForm();
 
     const onSubmit = data => console.log(data);
 
@@ -35,7 +35,7 @@ const Signup = () => {
                                     <input type='password' placeholder='' className='border bg-[#EAEAEA] rounded-lg p-2' />
                                 </div>
                                 <h1 className='text-[#346BD4]'>Forgot password?</h1>
-                                <button type='submit' className='bg-[#605BFF] p-3 rounded-lg text-white font-bold'>Sign in</button>
+                                <Link to="/upload" className='bg-[#605BFF] p-3 rounded-lg text-white font-bold items-center flex justify-center'>Sign in</Link>
                             </form>
                         </div>
                     </div>

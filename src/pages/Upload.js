@@ -3,6 +3,7 @@ import Leftbar from '../components/Leftbar'
 import noti from "../assets/Notification.svg"
 import { AiOutlineFileExcel } from "react-icons/ai";
 import { GoUpload } from "react-icons/go";
+import { Link } from "react-router-dom"
 const Upload = () => {
   return (
     <div className='flex flex-row'>
@@ -23,7 +24,7 @@ const Upload = () => {
               <p className='font-bold text-[#999CA0] text-xs gap-1 flex font-Figtree'>Drop Your excel sheet here or <p className='text-[#605BFF]'>browse</p></p>
             </div>
           </div>
-          <button className='bg-[#605BFF] w-5/12 font-semibold text-xl text-[#FFFFFF] mt-12 p-3 rounded-lg flex flex-row items-center justify-center gap-x-2'><GoUpload />Upload</button>
+          <Link to="/removal" className='bg-[#605BFF] w-5/12 font-semibold text-xl text-[#FFFFFF] mt-12 p-3 rounded-lg flex flex-row items-center justify-center gap-x-2'><GoUpload />Upload</Link>
         </div>
 
       </div>

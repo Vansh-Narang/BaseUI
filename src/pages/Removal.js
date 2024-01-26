@@ -3,6 +3,7 @@ import Leftbar from '../components/Leftbar'
 import noti from "../assets/Notification.svg"
 import { AiOutlineFileExcel } from "react-icons/ai";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { Link } from "react-router"
 const Upload = () => {
     return (
         <div className='flex flex-row'>
@@ -19,7 +20,7 @@ const Upload = () => {
                 <div className='flex flex-col items-center justify-center'>
                     <div className='mt-48 flex flex-col items-center justify-center border w-5/12'>
                         <div className='flex flex-col h-80 items-center justify-center gap-y-2'>
-                            <AiOutlineFileExcel height={70}/>
+                            <AiOutlineFileExcel height={70} />
                             <p className='font-bold text-[#999CA0] text-xs gap-1 flex font-Figtree'>upload-template.xlsx</p>
                             <p className='text-red-400 font-normal font-Figtree'>Remove</p>
                         </div>
