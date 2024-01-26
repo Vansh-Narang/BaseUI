@@ -7,13 +7,14 @@ import { Link } from "react-router-dom"
 import data from "../constants/data.json"
 import { Dropdown } from 'rsuite';
 import DropdownItem from 'rsuite/esm/Dropdown/DropdownItem';
-const Tagger = () => {
 
-    const [tags, selectedTags] = useState([])
+
+function Tagger() {
+    const [tags, selectedTags] = useState([]);
     return (
-        <div className='flex flex-row'>
+        <div className='flex flex-row '>
             <Leftbar />
-            <div className='bg-[#FAFAFB] h-lvh w-lvw flex flex-col'>
+            <div className='bg-[#FAFAFB]  w-lvw flex flex-col pb-[5%]'>
                 <div className='m-6 flex flex-row items-center justify-between'>
                     <h1 className='font-semibold text-2xl'>Upload CSV</h1>
                     <div className='flex flex-row gap-x-5'>
@@ -31,44 +32,44 @@ const Tagger = () => {
                     </div>
                     <Link to="/" className='bg-[#605BFF] w-5/12 font-semibold text-xl text-[#FFFFFF] mt-12 p-3 rounded-lg flex flex-row items-center justify-center gap-x-2 cursor-not-allowed opacity-50'><GoUpload />Upload</Link>
                 </div>
-                <div className='items-center justify-center mx-auto w-10/12'>
+                <div className='  w-10/12 self-center flex flex-col'>
                     <h1 className='m-6 font-Figtree text-xl font-bold'>Uploads</h1>
-                    <table className='flex items-center justify-between bg-slate-400'>
+                    <table className=' bg-slate-400 p-4'>
                         <thead className=''>
-                            <tr className='w-full'>
+                            <tr className='w-[100%]'>
                                 <th>ID</th>
                                 <th>Links</th>
                                 <th>Prefix</th>
                                 <th>Add tags</th>
                                 <th>Selected tags</th>
                             </tr>
-                            {data.map((item) => (
-                                <>
-                                    < tr key={item.id} className='bg-white' >
-                                        <td>{item.id}</td>
-                                        <td>{item.links}</td>
-                                        <td>{item.prefix}</td>
-                                        <select onChange={(e) => {
-                                            tags.push(e.target.value);
-                                            selectedTags(tags)
-                                            console.log(e.target.value);
-                                        }} className=''>
-                                            {
+                            {data.map((item) =>
 
-                                                item.select_tags.map((i) => (
-                                                    <>
-                                                        <option value="" selected disabled hidden>Select Tags</option>
-                                                        <option className='rounded-full'>
-                                                            {i}
-                                                        </option >
+                                <tr key={item.id} className='bg-white w-[100%] ' >
+                                    <td>{item.id}</td>
+                                    <td>{item.links}</td>
+                                    <td>{item.prefix}</td>
+                                    <select onChange={(e) => {
+                                        tags.push(e.target.value);
+                                        selectedTags(tags)
+                                        console.log(e.target.value);
+                                    }} className=''>
+                                        {
 
-                                                    </>
+                                            item.select_tags.map((i) => (
+                                                <>
+                                                    <option value="" selected disabled hidden>Select Tags</option>
+                                                    <option className='rounded-full'>
+                                                        {i}
+                                                    </option >
 
-                                                ))
-                                            }
-                                        </select>
-                                        <td>
-                                            {/* {
+                                                </>
+
+                                            ))
+                                        }
+                                    </select>
+                                    <td>
+                                        {/* {
                                                     tags ? (
                                                         <div>
                                                             No tag found
@@ -79,12 +80,11 @@ const Tagger = () => {
                                                         </div>
                                                     )
                                                 } */}
-                                            {tags}
-                                        </td>
-                                    </tr >
-                                </>
+                                        {tags}
+                                    </td>
+                                </tr >
 
-                            ))}
+                            )}
 
                         </thead>
                     </table>
@@ -95,5 +95,7 @@ const Tagger = () => {
         </div >
     )
 }
+
+
 
 export default Tagger
