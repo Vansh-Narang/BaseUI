@@ -5,8 +5,6 @@ import { AiOutlineFileExcel } from "react-icons/ai";
 import { GoUpload } from "react-icons/go";
 import { Link } from "react-router-dom"
 import data from "../constants/data.json"
-import { Dropdown } from 'rsuite';
-import DropdownItem from 'rsuite/esm/Dropdown/DropdownItem';
 const Tagger = () => {
 
     const [tags, selectedTags] = useState([])
