@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from "../assets/Subtract.svg"
+import { sidebarLinks } from "../constants/sidebarLinks"
 const Leftbar = () => {
     return (
         <div>
@@ -9,6 +10,16 @@ const Leftbar = () => {
                     <h1 className='font-semibold text-2xl'>Base</h1>
                 </div>
                 <div>
+                    {
+                        sidebarLinks.map((link) => (
+                            <div>
+                                <div>
+                                    <img src={link.icon}/>
+                                    <h3>{link.name}</h3>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
