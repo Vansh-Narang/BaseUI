@@ -4,6 +4,7 @@ import noti from "../assets/Notification.svg"
 import { AiOutlineFileExcel } from "react-icons/ai";
 import { GoUpload } from "react-icons/go";
 import { Link } from "react-router-dom"
+import data from "../constants/data.json"
 const Tagger = () => {
     return (
         <div className='flex flex-row'>
@@ -26,9 +27,20 @@ const Tagger = () => {
                     </div>
                     <Link to="/" className='bg-[#605BFF] w-5/12 font-semibold text-xl text-[#FFFFFF] mt-12 p-3 rounded-lg flex flex-row items-center justify-center gap-x-2 cursor-not-allowed opacity-50'><GoUpload />Upload</Link>
                 </div>
-
+                <div className='items-center justify-center'>
+                    <h1 className='m-6 font-Figtree text-xl font-bold'>Uploads</h1>
+                    <div className='bg-blue-500 items-center justify-between ml-10'>
+                        {
+                            data.map((i) => (
+                                <div className='bg-blue-500'>
+                                    hi
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
 
