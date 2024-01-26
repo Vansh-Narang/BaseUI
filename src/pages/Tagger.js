@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Leftbar from '../components/Leftbar'
 import noti from "../assets/Notification.svg"
 import { AiOutlineFileExcel } from "react-icons/ai";
 import { GoUpload } from "react-icons/go";
 import { Link } from "react-router-dom"
 import data from "../constants/data.json"
+import { Dropdown } from 'rsuite';
+import DropdownItem from 'rsuite/esm/Dropdown/DropdownItem';
 const Tagger = () => {
+
+    const [tags, selectedTags] = useState([])
     return (
         <div className='flex flex-row'>
             <Leftbar />
@@ -27,16 +31,65 @@ const Tagger = () => {
                     </div>
                     <Link to="/" className='bg-[#605BFF] w-5/12 font-semibold text-xl text-[#FFFFFF] mt-12 p-3 rounded-lg flex flex-row items-center justify-center gap-x-2 cursor-not-allowed opacity-50'><GoUpload />Upload</Link>
                 </div>
-                <div className='items-center justify-center'>
+                <div className='items-center justify-center mx-auto w-10/12'>
                     <h1 className='m-6 font-Figtree text-xl font-bold'>Uploads</h1>
-                    <div className='bg-blue-500 items-center justify-between ml-10'>
-                        {
-                            data.map((i) => (
-                                <div className='bg-blue-500'>
-                                    hi
-                                </div>
-                            ))
-                        }
+                    <div className='bg-[#F5F5F5] items-center justify-center ml-10 w-11/12'>
+                        <table className=''>
+                            <thead className=''>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Links</th>
+                                    <th>Prefix</th>
+                                    <th>Add tags</th>
+                                    <th>Selected tags</th>
+                                </tr>
+                                {data.map((item) => (
+                                    <>
+                                        < tr key={item.id} className='bg-white' >
+                                            <td>{item.id}</td>
+                                            <td>{item.links}</td>
+                                            <td>{item.prefix}</td>
+                                            <select onChange={(e) => {
+                                                tags.push(e.target.value);
+                                                selectedTags(tags)
+                                                console.log(e.target.value);
+                                            }} className=''>
+                                                {
+
+                                                    item.select_tags.map((i) => (
+                                                        <>
+                                                            <option value="" selected disabled hidden>Select Tags</option>
+                                                            <option className='rounded-full'>
+                                                                {i}
+                                                            </option >
+
+                                                        </>
+
+                                                    ))
+                                                }
+                                            </select>
+                                            <td>
+                                                {/* {
+                                                    tags ? (
+                                                        <div>
+                                                            No tag found
+                                                        </div>
+                                                    ) : (
+                                                        <div>
+                                                            {tags}
+                                                        </div>
+                                                    )
+                                                } */}
+                                                {tags}
+                                            </td>
+                                        </tr >
+                                    </>
+
+                                ))}
+
+                            </thead>
+                        </table>
+
                     </div>
                 </div>
             </div>
