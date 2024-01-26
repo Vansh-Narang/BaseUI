@@ -24,7 +24,7 @@ const Tagger = () => {
                             <p className='font-bold text-[#999CA0] text-xs gap-1 flex font-Figtree'>Drop Your excel sheet here or <p className='text-[#605BFF]'>browse</p></p>
                         </div>
                     </div>
-                    <Link to="/removal" className='bg-[#605BFF] w-5/12 font-semibold text-xl text-[#FFFFFF] mt-12 p-3 rounded-lg flex flex-row items-center justify-center gap-x-2'><GoUpload />Upload</Link>
+                    <Link to="/" className='bg-[#605BFF] w-5/12 font-semibold text-xl text-[#FFFFFF] mt-12 p-3 rounded-lg flex flex-row items-center justify-center gap-x-2 cursor-not-allowed opacity-50'><GoUpload />Upload</Link>
                 </div>
 
             </div>
