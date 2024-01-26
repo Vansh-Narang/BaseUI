@@ -1,6 +1,8 @@
 import React from 'react'
 import Leftbar from '../components/Leftbar'
 import noti from "../assets/Notification.svg"
+import { AiOutlineFileExcel } from "react-icons/ai";
+import { GoUpload } from "react-icons/go";
 const Upload = () => {
   return (
     <div className='flex flex-row'>
@@ -14,12 +16,16 @@ const Upload = () => {
             </div>
           </div>
         </div>
-        <div className='m-96 mt-48 flex items-center justify-center border'>
-          <div className='flex flex-col w-96 h-96 items-center justify-center gap-y-20'>
-            <p className='font-bold text-[#999CA0] text-xs flex flex-row gap-1'>Drop Your excel sheet here or <p>browse</p></p>
-            <button className='bg-[#605BFF] w-96 font-semibold text-xl text-[#FFFFFF]'>Upload</button>
+        <div className='flex flex-col items-center justify-center'>
+          <div className='mt-48 flex flex-col items-center justify-center border w-5/12'>
+            <div className='flex flex-col h-80 items-center justify-center gap-y-2'>
+              <AiOutlineFileExcel />
+              <p className='font-bold text-[#999CA0] text-xs gap-1 flex font-Figtree'>Drop Your excel sheet here or <p className='text-[#605BFF]'>browse</p></p>
+            </div>
           </div>
+          <button className='bg-[#605BFF] w-5/12 font-semibold text-xl text-[#FFFFFF] mt-12 p-3 rounded-lg flex flex-row items-center justify-center gap-x-2'><GoUpload />Upload</button>
         </div>
+
       </div>
     </div>
   )

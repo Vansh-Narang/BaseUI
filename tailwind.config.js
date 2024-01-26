@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         "lato": ['Lato', 'sans-serif'],
         'montserrat': ['Montserrat'],
+        "Figtree": ['Figtree', 'sans-serif']
       }
     },
   },
