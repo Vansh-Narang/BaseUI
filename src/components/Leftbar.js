@@ -13,9 +13,9 @@ const Leftbar = () => {
                     {
                         sidebarLinks.map((link) => (
                             <div>
-                                <div>
-                                    <img src={link.icon}/>
-                                    <h3>{link.name}</h3>
+                                <div className='flex flex-row gap-x-4 m-10'>
+                                    <img src={link.icon} />
+                                    <h3 className='text-[#9A9AA9] font-semibold text-xl'>{link.name}</h3>
                                 </div>
                             </div>
                         ))

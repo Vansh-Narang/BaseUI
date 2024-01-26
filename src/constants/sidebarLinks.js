@@ -4,7 +4,7 @@ import Document from "../assets/Document.svg"
 import Notification from "../assets/Notification.svg"
 import Setting from "../assets/Setting.svg"
 import Ticket from "../assets/Ticket.svg"
-import Chart from "../assets/Chart.png"
+import Chart from "../assets/Chart.svg"
 export const sidebarLinks = [
     {
         id: 1,
