@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 import data from "../constants/data.json"
 import { RxCross2 } from "react-icons/rx";
 function Tagger() {
-    const [tags, setTags] = useState([]);
+    // const [tags, setTags] = useState([]);
     const [selectedTagsMap, setSelectedTagsMap] = useState({});
 
     const handleTagSelection = (e, itemId) => {
@@ -31,6 +31,7 @@ function Tagger() {
         const updatedData = data.map((item) =>
             item.id === itemId ? { ...item, selectedTags: updatedTags } : item
         );
+        console.log(updatedData)
 
         // Update the data array in the future, use the updatedData state instead
         // setData(updatedData);
@@ -88,7 +89,7 @@ function Tagger() {
                                 <tr key={item.id} className='bg-[#FFFFFF] border w-full'>
                                     <td className='p-2'>{item.id}</td>
                                     {/* <td className='p-2'>{item.links}</td> */}
-                                    <a>{item.links}</a>
+                                    <a href='/' target='' className='text-[#605BFF]'>{item.links}</a>
                                     <td className='p-2'>{item.prefix}</td>
                                     <td className='p-2'>
                                         <select
