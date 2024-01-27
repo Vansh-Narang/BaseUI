@@ -72,11 +72,11 @@ function Tagger() {
                 </div>
                 <div className='w-10/12 self-center flex flex-col'>
                     <h1 className='m-6 font-Figtree text-xl font-bold'>Uploads</h1>
-                    <table className='w-full border border-collapse'>
+                    <table className='w-full'>
                         <thead className='bg-gray-700'>
                             {/* Inside the table header */}
                             <tr className='w-[100%] bg-[#F5F5F5]'>
-                                <th className='p-2'>ID</th>
+                                <th className='p-2'>SI No.</th>
                                 <th className='p-2'>Links</th>
                                 <th className='p-2'>Prefix</th>
                                 <th className='p-2'>Add tags</th>
@@ -87,7 +87,8 @@ function Tagger() {
                             {data.map((item) => (
                                 <tr key={item.id} className='bg-[#FFFFFF] border w-full'>
                                     <td className='p-2'>{item.id}</td>
-                                    <td className='p-2'>{item.links}</td>
+                                    {/* <td className='p-2'>{item.links}</td> */}
+                                    <a>{item.links}</a>
                                     <td className='p-2'>{item.prefix}</td>
                                     <td className='p-2'>
                                         <select
