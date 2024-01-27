@@ -73,7 +73,7 @@ function Tagger() {
                 </div>
                 <div className='w-10/12 self-center flex flex-col'>
                     <h1 className='m-6 font-Figtree text-xl font-bold'>Uploads</h1>
-                    <table className='w-full'>
+                    <table className='w-full text-left'>
                         <thead className='bg-gray-700'>
                             {/* Inside the table header */}
                             <tr className='w-[100%] bg-[#F5F5F5]'>
